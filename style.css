@@ -39,14 +39,14 @@ body {
 }
 
 .terminal-title {
-    color: #888;
+    color: #949494;
     font-size: 0.9rem;
 }
 
 .terminal-controls .control {
     margin-left: 8px;
     color: #888;
-    cursor: pointer;
+    cursor:pointer;
     font-size: 0.8rem;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .terminal-nav a {
-    color: #569cd6; /* Azul estilo VS Code */
+    color: #2984f3; /* Azul estilo VS Code */
     text-decoration: none;
 }
 
