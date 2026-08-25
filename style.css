@@ -1,52 +1,130 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página e centralização */
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background: rgb(36, 32, 32);
-  font-family: system-ui, -apple-system, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace; /* Tipografia de terminal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.card {
-  background: rgb(29, 98, 37);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  max-width: 320px;
+/* Janela do Terminal */
+.terminal-window {
+    background-color: #1e1e1e;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-h1 {
-  color: #f3f3f2;
-  margin-bottom: 0.7rem;
+/* Cabeçalho da janela (barrinha superior) */
+.terminal-header {
+    background-color: #2d2d2d;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
 }
 
-p {
-  font-weight: bolder;
-  color: #fffff8;
+.terminal-title {
+    color: #888;
+    font-size: 0.9rem;
 }
 
-button {
-  background: rgb(11, 17, 16);
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.2s ease;
+.terminal-controls .control {
+    margin-left: 8px;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.8rem;
 }
 
-button:hover {
-  background: rgb(31, 50, 47);
+/* Corpo do texto */
+.terminal-body {
+    padding: 20px;
 }
 
-.imagem {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 6px;
-  margin-top: 1rem;
+.terminal-nav {
+    margin-bottom: 30px;
+    color: #aaa;
+}
+
+.terminal-nav a {
+    color: #569cd6; /* Azul estilo VS Code */
+    text-decoration: none;
+}
+
+.terminal-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Blocos de comando */
+.command-block {
+    margin-bottom: 30px;
+}
+
+.prompt {
+    color: #4af626; /* Verde terminal */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.output p {
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+/* Lista de Projetos (usando <ul> e <li>) */
+.project-list {
+    list-style: none; /* Remove os marcadores padrão da <ul> */
+}
+
+.project-list li {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.project-thumb {
+    width: 120px;
+    height: 80px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.project-info h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.project-info .tech {
+    display: inline-block;
+    margin-top: 5px;
+    color: #ce9178; /* Cor laranja/texto estilo código */
+    font-size: 0.85rem;
+}
+
+/* Classes utilitárias para o JS */
+.hide-initially {
+    display: none;
 }
